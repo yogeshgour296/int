@@ -1,1 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+body{
+    margin: 0;
+    font-family: "Mulish", sans-serif;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+    /* background-color: #e9e9e9; */
+    position: relative;
+}
+body::after{
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgb(242,240,236);
+    background: linear-gradient(0deg, rgba(242,240,236,1) 0%, rgba(255,243,220,0.7) 100%);
+    z-index: -1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:is(ul, ol){
+    padding-left: 17px;
+}
+:is(ul, ol) li{
+    margin-block: 15px;
+}
 
+.topic-list :is(ul, ol) li a,
+.body-layout aside .sidebar-inner > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+.topic-list :is(ul, ol) li:not(:first-child){
+    margin-top: 15px;
+}
+/******************************************
+TYPOGRAPHY
+******************************************/
+:where(h1, h2, h3, h4, h5, h6, p):not(:first-child){
+    margin-block: 15px;
+}
+.text-red{
+    color: crimson;
+}
+.highlight-text{
+    font-weight: 900;
+}
+:where(h1, h2, h3, h4, h5, h6){
+    color: #000;
+}
+p{
+    line-height: 1.5;
+}
+b{
+    color: #000;
+}
+/******************************************
+LAYOUT
+******************************************/
+.body-layout{
+    display: flex;
+    flex-wrap: wrap;
+}
+.body-layout .main{
+    width: calc(100% - 350px);
+    padding: 70px;
+}
+.body-layout aside{
+    width: 350px;
+    background-color: #ffe4d2;
+}
+/**/
+.body-layout.interview-layout .main{
+    width: calc(100% - 550px);
+}
+.body-layout.interview-layout aside{
+    width: 550px;
+}
+aside .sidebar-inner{
+    position: sticky;
+    top: 0;
+    padding: 30px;
+}
+@media screen and (max-width:767px) {
+    .body-layout{
+        flex-direction: column-reverse;
+    }
+    .body-layout .main{
+        width: 100%;
+        padding: 15px;
+    }
+    .body-layout aside{
+        width: 100%;
+    }
+}
+/******************************************
+CODE
+******************************************/
+.code{
+    background-color: #ddd;
+    padding: 5px 7px;
+    border-radius: 5px;
+}
+.code-syntax{
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 15px solid #ddd;
+    position: relative;
+}
+.code-syntax::after{
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: #04AA6D;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/******************************************
+NOTE
+******************************************/
+.note{
+    padding: 15px;
+    background-color: #ffffcc;
+    border-left: 5px solid #ffeb3b;
+}
+/******************************************
+INTERVIEW CARD
+******************************************/
+.interview-container{
+    counter-reset: interview-counter;
+}
+.interview-card{
+    counter-increment: interview-counter;
+    margin-block: 30px;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    position: relative;
+}
+.interview-card h2::before{
+    content: counter(interview-counter) ". ";
+}
+.interview-card .date{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    padding: 5px 15px;
+    background-color: #ffe4d2;
+    border: 1px solid #efc8ae;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.11);
+}
