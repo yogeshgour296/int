@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="body-layout">
+        <div class="main">
+            <h1 id="basic">Basic</h1>
+            <div class="interview-container">
+                <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">03-03-2025</div>
+                    <h2>What is React?</h2>
+                    <p>React is a JavaScript library for building user interfaces. React is used to build single-page applications. <b>React allows us to create reusable UI components.</b></p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">03-03-2025</div>
+                    <h2>What are the major features of React?</h2>
+                    <ul>
+                        <li>Reusable Components:</li>
+                        <li>Virtual DOM</li>
+                        <li>JSX</li>
+                        <li>Server-Side Rendering (SSR)</li>
+                        <li><b>Community and Resources</b> React has a large and active community of developers, which means extensive resources are available for learning and troubleshooting. </li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">03-03-2025</div>
+                    <h2>How does React work?</h2>
+                    <p>React creates a virtual DOM. When state changes in a component it firstly runs a "diffing" algorithm, which identifies what has changed in the virtual DOM. The second step is reconciliation, where it updates the DOM with the results of the difference.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">03-03-2025</div>
+                    <h2>What is JSX?</h2>
+                    <p>JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.</p>
+                    <p>JSX converts HTML tags into react elements.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">03-03-2025</div>
+                    <h2>What is Virtual DOM?</h2>
+                    <p>The virtual DOM is an <b>in-memory representation</b> of the real DOM elements.</p>
+                    <p>Instead of interacting directly with the real DOM, which can be slow and costly in terms of performance, React creates a virtual representation of the UI components.</p>
+                    <p>This virtual representation is a lightweight JavaScript object that mirrors the structure of the real DOM.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">03-03-2025</div>
+                    <h2>How Virtual DOM works?</h2>
+                    <ol>
+                        <li><b>Rendering the Virtual DOM:</b> React creates a virtual representation of the UI as a tree of JavaScript objects.</li>
+                        <li><b>Updating State:</b> It generates a new Virtual DOM tree to reflect the updated state when the application state changes.</li>
+                        <li><b>Diffing Algorithm:</b> React compares the new Virtual DOM tree with the previous one using its efficient diffing algorithm to identify the minimal set of changes required.</li>
+                        <li><b>Updating the Real DOM:</b> React applies only the necessary changes to the real DOM, optimizing rendering performance.</li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">18-03-2025</div>
+                    <h2>What is the difference between Shadow DOM and Virtual DOM?</h2>
+                    <p>Great question! Shadow DOM and Virtual DOM are both powerful concepts in web development, but they serve very different purposes:</p>
+                    <h4>Shadow DOM</h4>
+                    <ul>
+                        <li><b>What it is:</b>A browser feature that allows developers to encapsulate parts of the DOM and CSS into isolated, self-contained components. It's part of Web Components.</li>
+                        <li><b>Purpose:</b>It creates a mini, private DOM tree inside an element, isolating the styles and scripts from the main DOM. This prevents style or functionality conflicts with other parts of the page.</li>
+                        <li><b>Use Case:</b>It's ideal for reusable UI components like custom elements (e.g., <my-custom-button>).</li>
+                        <li><b>Example Benefit:</b>Styles applied inside the Shadow DOM won’t leak out, and external styles won’t unintentionally affect the Shadow DOM.</li>
+                    </ul>
+                    <br>
+                    <h4>Virtual DOM</h4>
+                    <ul>
+                        <li><b>What it is:</b>A lightweight, JavaScript-based representation of the actual DOM used in libraries/frameworks like React.</li>
+                        <li><b>Purpose:</b>It optimizes UI rendering by batching changes. Instead of updating the real DOM immediately, updates are made to the virtual DOM, and only the differences (diff) are applied to the actual DOM.</li>
+                        <li><b>Use Case:</b>It's designed for performance optimization in dynamic web applications where frequent updates to the DOM occur.</li>
+                        <li><b>Example Benefit:</b>Minimizes expensive direct DOM manipulations, making the app faster and more responsive.</li>
+                    </ul>
+                    <br>
+                    <h4>Key Difference</h4>
+                    <ul>
+                        <li><b>Scope:</b>Shadow DOM focuses on encapsulation for component-level isolation, while Virtual DOM is about efficient rendering of the entire application.</li>
+                        <li><b>Native vs Framework:</b>Shadow DOM is a native browser feature, while Virtual DOM is a concept implemented by JavaScript frameworks like React.</li>
+                    </ul>
+                    <br>
+                    <details>
+                        <summary>Example</summary>
+                        <img src="./images/shadow-dom.PNG" alt="Shadow DOM">
+                    </details>
+                </div>
+                <!-- END: card -->
+               
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">04-03-2025</div>
+                    <h2>What is the difference between Element and Component?</h2>
+                    <p>An Element is an object that represents a DOM node it is a part of DOM structure,</p>
+                    <p>while a component is a reusable block of code that contains logic, states, and also returns the Element.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">18-03-2025</div>
+                    <h2>When to use a Class Component over a Function Component?</h2>
+                    <ol>
+                        <li><b>Working with Older Codebases:</b>
+                            <ul>
+                                <li>If you're maintaining or adding features to an existing project that already uses Class Components, it’s often simpler to stick with the same approach for consistency.</li>
+                            </ul>
+                        </li>
+                        <li><b>Complex Lifecycle Methods:</b>
+                            <ul>
+                                <li>Class Components have explicit lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount, which can be useful if you find the structure easier to follow compared to managing lifecycle with Hooks in Function Components.</li>
+                            </ul>
+                        </li>
+                        <li><b>Need for Error Boundaries:</b>
+                            <ul>
+                                <li>Only Class Components can be used to create error boundaries. If you need to handle runtime errors in your component tree (e.g., using componentDidCatch), you’ll need a Class Component.</li>
+                            </ul>
+                        </li>
+                        <li><b>Personal or Team Familiarity:</b>
+                            <ul>
+                                <li>If you or your team are more comfortable using Class Components or haven't fully adopted Hooks yet, Class Components might still make sense for your workflow.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">18-03-2025</div>
+                    <h2>Why it is Recommended to use Functional Components over Class Components ?</h2>
+                    <ol>
+                        <li><b>Simplicity and Conciseness</b></li>
+                        <li><b>Hooks Enable Powerful Features</b></li>
+                        <li><b>Better Performance</b></li>
+                        <li><b>Easier Testing</b></li>
+                        <li><b>Modern React Paradigm</b></li>
+                        <li><b>Improved Readability and Debugging</b></li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">04-03-2025</div>
+                    <h2>What are Pure Components?</h2>
+                    <p>PureComponent is similar to Component but it <b>skips re-renders</b> for same props and state. </p>
+                    <a href="https://react.dev/reference/react/PureComponent" target="_blank">Source</a>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">04-03-2025</div>
+                    <h2>What are Head less Components?</h2>
+                    <p>Headless components are the components that have no user interface but have functionality. It does not care about how your components look, how they are designed, styled. It just gives you the functionality and how it will look when it is mounted or hovered is under your control. It separates the logic and behavior of a component from its visual representation.</p>
+                    <a href="https://medium.com/@ignatovich.dm/building-custom-react-components-with-headless-ui-patterns-a6f046f62763" target="_blank">Source</a>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">04-03-2025</div>
+                    <h2>What is state in React?</h2>
+                    <p>The <b>state is a built-in React object</b> that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">04-03-2025</div>
+                    <h2>What are props in React?</h2>
+                    <p>Props is a special keyword in React that stands for properties and is used for passing data from one component to another. Data with props are passed in a unidirectional flow from parent to child.</p>
+                </div>
+                <!-- END: card -->
+                <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">04-03-2025</div>
+                    <h2>What is the difference between state and props?</h2>
+                    <p>Props are used to pass data from a parent component to a child component, while state is used to manage data within a component. Props are immutable and cannot be changed within a component, while state is mutable and can be updated.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">04-03-2025</div>
+                    <h2>What are synthetic events in React?</h2>
+                    <p>In React, <b>synthetic events are React’s wrapper around native browser events.</b> They provide a consistent event-handling mechanism across different browsers, ensuring that event properties and behaviors are the same regardless of the browser being used.</p>
+                    <details>
+                        <summary>Image</summary>
+                        <img src="./images/synthetic-svents.png" alt="What are synthetic events in React?">
+                      </details>
+                    <br/>
+                    <a href="https://www.youtube.com/watch?v=iWGKkMTRq1s" target="_blank">Source</a>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">05-03-2025</div>
+                    <h2>What are inline conditional expressions?</h2>
+                    <p>In React, an inline conditional expression is a concise way to conditionally render content or components within JSX. It enables you to make rendering decisions right within your JSX code without the need for separate if statements or ternary operators.</p>
+
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">05-03-2025</div>
+                    <h2>What is "key" prop and what is the benefit of using it in arrays of elements?</h2>
+                    <p>Key prop helps React identify which items have changed, are added, or are removed.</p>
+                    <a href="https://meganslo.medium.com/why-is-reacts-key-prop-important-b6bd51124270" target="_blank">Source</a>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">05-03-2025</div>
+                    <h2>What are controlled components?</h2>
+                    <p>Controlled components are form inputs whose values are controlled by React state. The state variables are updated whenever the value of the input changes, and the value of the input is set explicitly through the value prop. The onChange event handler is used to update the state.</p>
+                    <p>Controlled Components have their state managed by React, providing a controlled flow of data, while Uncontrolled Components manage their state internally and rely on the DOM for handling interactions. The choice between the two patterns depends on the specific requirements and use cases of the application.</p>
+                    <a href="https://medium.com/@vitorbritto/react-design-patterns-controlled-uncontrolled-component-pattern-7335b85413a0" target="_blank">Source</a>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">05-03-2025</div>
+                    <h2>What are uncontrolled components?</h2>
+                    <p>An uncontrolled component in React is one that stores its own state internally and does not control its value through the React state mechanism. Instead of being managed by React's state system, it relies directly on the DOM to provide its current value.</p>
+                    <p>Controlled Components have their state managed by React, providing a controlled flow of data, while Uncontrolled Components manage their state internally and rely on the DOM for handling interactions. The choice between the two patterns depends on the specific requirements and use cases of the application.</p>
+                    <a href="https://medium.com/@vitorbritto/react-design-patterns-controlled-uncontrolled-component-pattern-7335b85413a0" target="_blank">Source</a>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">05-03-2025</div>
+                    <h2>What is the difference between createElement and cloneElement?</h2>
+                    <p>The main difference between createElement and cloneElement is that createElement is used to create a new React element, while cloneElement is used to modify an existing React element. CloneElement allows you to create a new element that inherits the props of an existing element, but with additional or overridden props. This is useful when you want to reuse an existing element with some modifications.</p>
+                    <a href="https://medium.com/geekculture/understanding-reacts-createelement-and-cloneelement-methods-46ab0d7ecfb3#:~:text=The%20main%20difference%20between%20createElement,with%20additional%20or%20overridden%20props." target="_blank">Source</a>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">05-03-2025</div>
+                    <h2>What is Lifting State Up in React?</h2>
+                    <p>Lifting state up is a pattern in React where you move the state from a lower-level component to a higher-level component, so that it can be shared between multiple child components. In other words, you are moving the state up the component tree, so that it becomes the responsibility of a higher-level component. By doing this, you are centralising the state management in a single component, which makes it easier to manage and avoids duplicating state across components.</p>
+                    <details>
+                        <summary>Image</summary>
+                        <img src="./images/lifting-state-up.png" alt="What are synthetic events in React?">
+                    </details>
+                    <br/>
+
+                    <h4>How to Lift State Up in React:</h4>
+                    <ol>
+                        <li>Using Callbacks:</li>
+                        <li>Using Context:</li>
+                        <li>Using Redux:</li>
+                    </ol>
+                    <a href="https://medium.com/@marazzo94/lifting-state-up-in-react-sharing-data-between-parent-and-child-componentsintroduction-54d43342c944" target="_blank">Source</a>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">05-03-2025</div>
+                    <h2>What are Higher-Order Components?</h2>
+                    <p>Higher-order (HOCs) are functions that take a component and return a new component with some extended or modified behavior. Essentially, they allow you to reuse logic across multiple components without duplicating code.</p>
+                    <details>
+                        <summary>Image</summary>
+                        <img src="./images/higher-order.jpg" alt="What are Higher-Order Components?">
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">06-03-2025</div>
+                    <h2>What is children prop?</h2>
+                    <p>It is a feature allows you to pass any content you want into a component, whether it’s a simple text string or a complex React component. With props.children, you can create components that can be used in many different parts of your application, and can be customized with different content each time they are used. This makes your code more modular and easier to maintain in the long run. Overall, props.children is a powerful tool that can help you create more versatile and reusable components in your React applications.How to use props.children</p>
+                    <details>
+                        <summary>Image</summary>
+                        <img src="./images/children-prop.png" alt="What is children prop?">
+                    </details>
+                    <br/>
+                    <a href="https://naveenrenji.medium.com/understanding-props-children-in-react-with-an-example-e4e0b446358a" target="_blank">Source</a>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">06-03-2025</div>
+                    <h2>What is reconciliation?</h2>
+                    <p>React Reconciliation refers to React’s process of comparing the current and previous states of the Virtual DOM and updating the DOM efficiently. It makes the DOM updates faster in React. It updates the virtual DOM first and then uses the diffing algorithm to make efficient and optimized updates in the Real DOM.</p>
+                    <h4>How ReactJS Reconciliation Works</h4>
+                    <ol>
+                        <li>Render Phase:
+                            <ul>
+                                <li>React calls the render() method of a component to generate a new Virtual DOM representation.</li>
+                                <li>This new Virtual DOM is compared with the previous Virtual DOM snapshot.</li>
+                            </ul>
+                        </li>
+                        <li>Diffing Algorithm:
+                            <ul>
+                                <li>React compares the old and new Virtual DOM trees to determine the differences.</li>
+                                <li>Instead of re-rendering the entire UI, React updates only the changed nodes.</li>
+                            </ul>
+                        </li>
+                        <li>Commit Phase:
+                            <ul>
+                                <li>Once the differences are determined, React applies the updates to the real DOM in the most efficient way.</li>
+                                <li>React batches updates and minimizes reflows and repaints for better performance.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">06-03-2025</div>
+                    <h2>What is lazy function in React?</h2>
+                    <p>lazy function in React is a way to load components only when they are needed. This helps improve the initial loading time of your application by splitting the code into smaller chunks. When you use lazy, the component is loaded dynamically, which means it's only fetched when it's about to be rendered. This process is also known as "code splitting." To handle the loading state, you wrap the lazy-loaded component with a Suspense component and provide a fallback that will be displayed while the component is being loaded.</p>
+                    <details>
+                        <summary>Image</summary>
+                        <img src="./images/lazy-loaded.png" alt="What is lazy function in React?">
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">06-03-2025</div>
+                    <h2>Does the lazy function support named exports?</h2>
+                    <p>No, the lazy function in React does not support named exports directly. The lazy function expects a default export from the module. If you try to use named exports, you'll encounter an error.</p>
+                    <p>However, you can work around this limitation by re-exporting the named export as a default export in an intermediary module. Here's an example to illustrate this:</p>
+                    <details>
+                        <summary>Image</summary>
+                        <img src="./images/named-exports.png" alt="Does the lazy function support named exports?">
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">06-03-2025</div>
+                    <h2>Why React uses className over class attribute?</h2>
+                    <p>React uses className instead of the class attribute because class is a reserved keyword in JavaScript. In JavaScript, class is used to define classes, which are a part of the object-oriented programming features of the language. To avoid conflicts and confusion, React uses className as the attribute for defining CSS classes in JSX (JavaScript XML), which is a syntax extension used by React.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">06-03-2025</div>
+                    <h2>What are fragments?</h2>
+                    <p>In React, Fragments are a way to group a list of children without adding extra nodes to the DOM. Essentially, a Fragment allows you to return multiple elements from a component's render method without having to wrap them in an additional DOM element like a div.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">06-03-2025</div>
+                    <h2>Why can't we return a list of elements without a wrapper or Fragment?</h2>
+                    <p>In React, you can't return a list of elements without wrapping them in a single parent element, like a div or a Fragment, due to how JSX works. JSX needs to have one root element to return because it ultimately translates to JavaScript function calls, and a function can only return a single value. Returning multiple sibling elements directly would break this single return value rule.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">07-03-2025</div>
+                    <h2>What are stateless components?</h2>
+                    <p>Stateless components are JavaScript functions that return JSX (JavaScript XML) to describe the structure and appearance of the component. Unlike stateful components, they do not have an internal state and do not manage any data. Instead, they receive data and behavior through props (properties) passed down from parent components.</p>
+                    <h4>Key features of stateless components:</h4>
+                    <ol>
+                        <li><b>Pure functions:</b> They behave like simple functions that take input (props) and return output (UI elements).</li>
+                        <li><b>No internal state:</b> They don't have their own "memory" of past interactions or events.</li>
+                        <li><b>Easier to test:</b> Since they don't depend on state, they're predictable and simple to debug.</li>
+                        <li><b>Improved performance:</b> They avoid the overhead of managing state, making them faster than stateful components.</li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">07-03-2025</div>
+                    <h2>What are stateful components?</h2>
+                    <p>A stateful component is a component in a programming framework, like React, that can track and manage its own data (state) and update the user interface based on changes in that state. It is dynamic and responds to user interactions or other events.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">07-03-2025</div>
+                    <h2>How are stateful components different from stateless components?</h2>
+                    <ul>
+                        <li>
+                            <b>Stateful Components:</b>
+                            <ol>
+                                <li><b>Manage internal state:</b> These components store and manage their own data (state).</li>
+                                <li><b>Dynamic:</b> They can update and re-render themselves based on user interactions or other events.</li>
+                                <li><b>More complex:</b> Require extra logic to handle and update the state.</li>
+                                <li><b>Example:</b> A login form that tracks input fields and shows errors if validation fails.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <b>Stateless Components:</b>
+                            <ol>
+                                <li><b>No internal state:</b> They rely entirely on data (props) passed from parent components.</li>
+                                <li><b>Static:</b> Render the same output as long as the props remain unchanged.</li>
+                                <li><b>Simpler:</b> Easier to write, test, and maintain due to their predictable behavior.</li>
+                                <li><b>Example:</b> A button that displays a fixed label like "Submit."</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">07-03-2025</div>
+                    <h2>What are the advantages of React?</h2>
+                    <ul>
+                        <li>Component-based architecture</li>
+                        <li>Virtual DOM</li>
+                        <li>Declarative syntax</li>
+                        <li>Rich ecosystem</li>
+                        <li>Cross-platform development</li>
+                        <li>One-way data flow</li>
+                        <li>Strong community support</li>
+                        <li>JSX</li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">07-03-2025</div>
+                    <h2>What are the limitations of React?</h2>
+                    <ul>
+                        <li><b>Learning Curve:</b> React introduces concepts like JSX, Virtual DOM, and state management, which might be challenging for beginners to grasp.</li>
+                        <li><b>Boilerplate Code:</b> Setting up a React project often requires additional configuration with tools like Webpack or Babel, which can be time-consuming.</li>
+                        <li><b>Focus on UI:</b> React is a library, not a full framework, meaning developers need to integrate additional libraries for routing (e.g., React Router) or state management (e.g., Redux) in larger applications.</li>
+                        <li><b>Performance Overhead:</b> Overuse of state or frequent re-renders can lead to performance issues, requiring optimization techniques like memoization.</li>
+                        <li><b>Fragmentation:</b> With its rich ecosystem, there can be too many choices for libraries or tools, which can overwhelm developers.</li>
+                        <li><b>SEO Challenges:</b> React's single-page applications (SPAs) can face issues with search engine optimization, although this can be addressed with server-side rendering (SSR) using tools like Next.js.</li>
+                        <li><b>Rapid Changes:</b> React and its ecosystem evolve quickly, meaning developers need to continuously learn and update skills to keep up.</li>
+                        <li><b>Lack of Opinions:</b> React doesn't enforce project structure or architecture, which could lead to inconsistencies in larger teams.</li>
+                    </ul>                    
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">07-03-2025</div>
+                    <h2>What are the recommended ways for static type checking?</h2>
+                    <p>Static type checking helps catch type-related errors during development rather than at runtime, ensuring more robust and maintainable code. Here are some widely recommended ways to perform static type checking:</p>
+                    <ul>
+                        <li>
+                          <b>TypeScript:</b>
+                          <p>A superset of JavaScript that introduces strong typing. Helps define types for variables, functions, and objects, making development more robust.</p>
+                        </li>
+                        <li>
+                          <b>Flow:</b>
+                          <p>A static type-checker for JavaScript, developed by Meta, allowing gradual typing for incremental adoption and real-time type error detection.</p>
+                        </li>
+                        <li>
+                          <b>PropTypes (for React):</b>
+                          <p>A lightweight way to validate the types of props passed to React components. For example:</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">07-03-2025</div>
+                    <h2>What is the use of react-dom package?</h2>
+                    <ul>
+                      <li>
+                        <b>Rendering Components:</b>
+                        <p>
+                          The <code>react-dom</code> package includes the <code>render</code> method to render React components into the DOM. Example:
+                        </p>
+                        <details>
+                            <summary>Code</summary>
+                            <pre class="code-syntax">
+                                <code>
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import App from './App';
+      
+      ReactDOM.render(
+      <App />,
+      document.getElementById('root')
+      );
+      </code>
+                              </pre>
+                        </details>
+                      </li>
+                      <li>
+                        <b>Server-Side Rendering:</b>
+                        <p>
+                          Used for rendering React components on the server with methods like <code>renderToString</code> or <code>renderToStaticMarkup</code>.
+                        </p>
+                      </li>
+                      <li>
+                        <b>Hydration:</b>
+                        <p>
+                          The <code>hydrate</code> method is used to attach React's behavior to server-rendered HTML for applications using server-side rendering or static-site generation.
+                        </p>
+                      </li>
+                      <li>
+                        <b>Portals:</b>
+                        <p>
+                          Allows components to render outside their parent DOM hierarchy. Example:
+                        </p>
+                        <details>
+                            <summary>Code</summary>
+                            <pre class="code-syntax">
+                                <code>
+      import { createPortal } from 'react-dom';
+      
+      const Modal = ({ children }) => {
+      return createPortal(
+      children,
+      document.getElementById('modal-root')
+      );
+      };
+                                </code>
+                              </pre>
+                        </details>
+                      </li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>What is ReactDOMServer?</h2>
+                    <p>ReactDOMServer is a module provided by React for rendering components on the server side, instead of in the browser. It allows you to generate HTML strings from React components that can be sent to the client as part of a server response. This is particularly useful in server-side rendering (SSR), where rendering occurs on the server to improve page load times and search engine optimization (SEO).</p>
+                    <details>
+                        <summary>Code</summary>
+                        <img src="./images/ReactDOMServer.PNG" alt="ReactDOMServer">
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>How events are different in React?</h2>
+                    <p>In React, event handling works differently from handling events in regular HTML or vanilla JavaScript. Here's how:</p>
+                    <br/>
+                    <h4>Event Binding:</h4>
+                    <ul>
+                        <li><b>In HTML/JavaScript:</b> Event handlers are typically added using attributes like onclick, onmouseover, etc., or with methods like addEventListener.</li>
+                        <li><b>In React:</b> Event handlers are passed as props to elements, using camelCase syntax (e.g., onClick instead of onclick).</li>
+                    </ul>
+                    <br/>
+                    <h4>Synthetic Events:</h4>
+                    <ul>
+                        <li>React creates a wrapper around native browser events called SyntheticEvent. This is a cross-browser abstraction, ensuring consistent behavior across different browsers.</li>
+                        <li>Example: A SyntheticEvent works just like a browser event, but it's managed by React for better performance and compatibility.</li>
+                    </ul>
+                    <br/>
+                    <h4>Binding this:</h4>
+                    <ul>
+                        <li>In JavaScript: You may need to bind the this context manually when passing event handlers in a class component.</li>
+                        <li>In React: React automatically ensures the correct context in functional components, especially with hooks. However, in older class components, you must explicitly bind this</li>
+                        <details>
+                            <summary>Code</summary>
+                            <img src="./images/events-Binding.png" alt="How events are different in React?">
+                        </details>
+                    </ul>
+                    <br/>
+                    <h4>Preventing Default:</h4>
+                    <ul>
+                        <li>In JavaScript, you use event.preventDefault() directly.</li>
+                        <li>In React, you still call e.preventDefault(), but using the SyntheticEvent object:</li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>What is the impact of indexes as keys?</h2>
+                    <p>Using indexes as keys in React has some potential drawbacks that can negatively impact your application, particularly in scenarios where the list of items being rendered changes dynamically. Here's a breakdown:</p>
+                    <ol>
+                        <li>
+                            <b>Performance Issues</b>
+                            When React uses indexes as keys, it may not properly identify which items in a list have been added, removed, or reordered. This can cause unnecessary re-renders of components, leading to performance inefficiencies.
+                            <h4>For example:</h4>
+                            <ul>
+                                <li>If the order of list items changes and keys are based on indexes, React might assume the DOM structure hasn't changed and simply updates the content, which can result in mismatches.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>State Preservation Problems</b>
+                            Keys are crucial for associating state with the correct elements. Using indexes as keys can cause React to reuse a component incorrectly, leading to unexpected behavior or state-related bugs.
+                            <br/><br/>
+                            <details>
+                                <summary>Example:</summary>
+                                <pre class="code-syntax">const items = ['Apple', 'Banana', 'Cherry'];
+items.splice(1, 0, 'Date'); // Insert "Date" at index 1</pre>
+<p><small>If you use an index as the key, React might mistakenly associate the state of "Banana" with "Date" after the update.</small></p>
+                            </details>
+                        </li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>Do Hooks replace render props and higher order components?</h2>
+                    <p>Hooks don't entirely replace render props or higher-order components (HOCs), but they do provide a simpler and more streamlined alternative for solving many of the same problems.</p>
+                    <p>Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>What is a switching component?</h2>
+                    <p>A switching component in React is a component that conditionally renders one of several child components based on some logic, such as application state or a specific route. It acts like a "switch" to determine which component should be displayed at a given time.</p>
+                    <details>
+                        <summary>Code</summary>
+                        <img src="./images/Switching-Component.PNG" alt="What is a switching component?">
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>What are React Mixins?</h2>
+                    <p>In React, Mixins were a way to share reusable logic across multiple components in class-based components. They allowed you to "mix in" functionalities into a component, enabling code reuse without duplicating logic.</p>
+                    <details>
+                        <summary>Code</summary>
+                        <img src="./images/Mixin.PNG" alt="What are React Mixins?">
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>Are custom DOM attributes supported in React v16?</h2>
+                    <p>Yes, React v16 fully supports custom DOM attributes. Any attributes that are not standard HTML attributes will be passed directly to the DOM by React. This change makes it easier to use React with custom data attributes or non-standard attributes required by third-party libraries.</p>
+                    <details>
+                        <summary>Code</summary>
+                        <img src="./images/custom-dom-attributes.PNG" alt="Are custom DOM attributes supported in React v16?">
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>What is React PropTypes array with shape?</h2>
+                    <p>In React, PropTypes is a type-checking library that allows you to validate the props passed to a component. When you expect a prop to be an array of objects, and you want to validate the shape of each object in the array, you use PropTypes.arrayOf combined with PropTypes.shape</p>
+                    <details>
+                        <summary>Code</summary>
+                        <img src="./images/proptype-array-with-shape.PNG" alt="What is React PropTypes array with shape?">
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>Why you can't update props in React?</h2>
+                    <p>You can't update props in React because props are immutable, meaning they are read-only and cannot be modified directly by the receiving component. Props are designed to pass data from a parent component to a child component and should not be changed by the child. This ensures a one-way data flow, which is a core principle of React's architecture, making components predictable and easier to debug.</p>
+                    <h4>If You Need to Update Data:</h4>
+                    <ul>
+                        <li><b>Update in Parent:</b> If you need to modify the data, do it in the parent component and pass the updated props down to the child.</li>
+                        <li><b>Use State:</b> If the component needs to manage its own updatable data, you should use state instead of props.</li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">11-03-2025</div>
+                    <h2>What are the common folder structures for React?</h2>
+                    <p>A well-organized folder structure is important in React projects to keep the codebase maintainable and scalable. There isn't a single "right" way to structure your folders—it often depends on the size, complexity, and requirements of your application. However, here are some common folder structures that developers use:</p>
+                    <details>
+                        <summary>Code</summary>
+                        <img src="./images/structure-1.PNG" alt="What are the common folder structures for React?">
+                        <img src="./images/structure-2.PNG" alt="What are the common folder structures for React?">
+                        <img src="./images/structure-3.PNG" alt="What are the common folder structures for React?">
+                        <img src="./images/structure-4.PNG" alt="What are the common folder structures for React?">
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">12-03-2025</div>
+                    <h2>What are the popular packages for animation?</h2>
+                    <p>React has a vibrant ecosystem of animation libraries that can bring your web applications to life. Here are some popular ones</p>
+                    <ol>
+                        <li><b>React Spring:</b> A physics-based animation library that provides smooth and natural animations.</li>
+                        <li><b>Framer Motion:</b> Known for its declarative API, it's great for creating fluid and interactive animations.</li>
+                        <li><b>React Transition Group:</b> A simple library for managing component transitions.</li>
+                        <li><b>GreenSock Animation Platform (GSAP):</b> A powerful library for complex animations, widely used in the industry.</li>
+                        <li><b>React Awesome Reveal:</b> Focuses on revealing animations when components become visible.</li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">12-03-2025</div>
+                    <h2>What is the benefit of styles modules?</h2>
+                    <p>CSS Modules offer several benefits when it comes to styling your web applications. Here's why they can be a game-changer:</p>
+                    <ol>
+                        <li><b>Scoped Styles</b>
+                            <ul>
+                                <li>CSS Modules ensure that styles are scoped locally to the component, avoiding clashes with global styles.</li>
+                                <li>For example, if two components have a .button class, they won't interfere with each other.</li>
+                            </ul>
+                        </li>
+                        <li><b>Better Maintainability</b>
+                            <ul>
+                                <li>By localizing styles to components, your stylesheets become easier to manage and maintain, especially in large projects.</li>
+                            </ul>
+                        </li>
+                        <li><b>Automatic Class Name Generation</b>
+                            <ul>
+                                <li>CSS Modules generate unique class names behind the scenes, eliminating the need for manually naming classes to avoid conflicts.</li>
+                            </ul>
+                        </li>
+                        <li><b>Component-based Styling</b>
+                            <ul>
+                                <li>They align with React's component-based architecture, promoting encapsulated and reusable styling.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dynamic Styling</b>
+                            <ul>
+                                <li>Class names can be imported and used programmatically, making it easy to apply styles dynamically.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <details>
+                        <summary>Code</summary>
+                        <img src="./images/styles-modules.PNG" alt="What is React PropTypes array with shape?">
+                    </details>
+                    
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">12-03-2025</div>
+                    <h2>What is React-specific linters?</h2>
+                    <p>React-specific linters are tools or plugins that work alongside JavaScript linters like ESLint to help you enforce best practices and maintain high-quality code specifically for React applications. They ensure that your React code is clean, consistent, and adheres to React's conventions. Here's what they focus on:</p>
+                    <h4>Key Features of React-specific Linters</h4>
+                    <ol>
+                        <li><b>React Code Standards:</b>
+                            <ul>
+                                <li>Enforce rules for proper React component structure, naming conventions, and usage.</li>
+                            </ul>
+                        </li>
+                        <li><b>JSX Syntax Checks:</b>
+                            <ul>
+                                <li>Validate JSX syntax, ensuring it is used correctly and consistently.</li>
+                            </ul>
+                        </li>
+                        <li><b>Rules of Hooks:</b>
+                            <ul>
+                                <li>Ensure compliance with React's Rules of Hooks (e.g., only calling hooks at the top level or within React components).</li>
+                            </ul>
+                        </li>
+                        <li><b>Accessibility (a11y):</b>
+                            <ul>
+                                <li>Ensure your application meets accessibility standards by identifying issues like missing alt attributes, improper ARIA roles, or missing labels for form elements.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">12-03-2025</div>
+                    <h2>What are the popular React-specific linters?</h2>
+                    <ol>
+                        <li><b>ESLint:</b> The most widely used linter for JavaScript, including React. It can be extended with plugins for React-specific rules.</li>
+                        <li><b>Prettier:</b> While not a linter, Prettier is an opinionated code formatter that ensures consistent code style. It can be integrated with ESLint using eslint-plugin-prettier.</li>
+                        <li><b>Husky and lint-staged:</b> These tools work alongside linters to enforce code quality by running linting checks before committing code to a repository.</li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Question</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Question</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+            </div>
+
+            <br>
+            <h1 id="advance">Advance</h1>
+            <div class="interview-container">
+                  <!-- START: card -->
+                  <div class="interview-card">
+                    <div class="date">12-03-2025</div>
+                    <h2>What is React Fiber?</h2>
+                    <p>React Fiber is an advanced architecture of React, which is the popular JavaScript library for building user interfaces. Introduced in React 16, Fiber reimagines how React processes updates and renders components, making the library more efficient and flexible for modern use cases.</p>
+                    <h4>Key Features of React Fiber</h4>
+                    <ol>
+                        <li><b>Concurrency:</b>
+                            <ul>
+                                <li>React Fiber allows updates to be processed asynchronously, prioritizing important updates and pausing others when necessary. This is especially useful for keeping apps responsive even during heavy computations.</li>
+                            </ul>
+                        </li>
+                        <li><b>Incremental Rendering:</b>
+                            <ul>
+                                <li>Instead of updating the entire application in one go, React Fiber breaks updates into small units of work, spreading them across multiple frames. This enables smoother rendering and improves performance.</li>
+                            </ul>
+                        </li>
+                        <li><b>Prioritization:</b>
+                            <ul>
+                                <li>Fiber assigns priorities to different updates (e.g., user input vs. less urgent rendering), ensuring critical interactions are handled first.</li>
+                            </ul>
+                        </li>
+                        <li><b>Error Boundaries:</b>
+                            <ul>
+                                <li>Fiber introduced error boundaries, enabling developers to catch and handle errors at the component level without crashing the entire application.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">12-03-2025</div>
+                    <h2>Why React Fiber Matters</h2>
+                    <p>Fiber opens up powerful features like Concurrent Mode, Suspense, and Time Slicing, which make React applications faster and more fluid. It lays the groundwork for future innovations in React.</p>
+                    <p>If you'd like, I can dive deeper into any specific feature or explain how to use Fiber-related concepts in your projects!</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">12-03-2025</div>
+                    <h2>What is the main goal of React Fiber?</h2>
+                    <p>The main goal of React Fiber is to enhance the rendering process of React by making it more efficient, flexible, and capable of handling complex modern applications. It achieves this through a revamped architecture designed to improve responsiveness and user experience. Here are the core objectives of React Fiber:</p>
+                    <ol>
+                        <li><b>Concurrency:</b>
+                            <ul>
+                                <li>React Fiber allows updates to be processed asynchronously, prioritizing important updates and pausing others when necessary. This is especially useful for keeping apps responsive even during heavy computations.</li>
+                            </ul>
+                        </li>
+                        <li><b>Incremental Rendering:</b>
+                            <ul>
+                                <li>Instead of updating the entire application in one go, React Fiber breaks updates into small units of work, spreading them across multiple frames. This enables smoother rendering and improves performance.</li>
+                            </ul>
+                        </li>
+                        <li><b>Prioritization:</b>
+                            <ul>
+                                <li>Fiber assigns priorities to different updates (e.g., user input vs. less urgent rendering), ensuring critical interactions are handled first.</li>
+                            </ul>
+                        </li>
+                        <li><b>Error Boundaries:</b>
+                            <ul>
+                                <li>Fiber introduced error boundaries, enabling developers to catch and handle errors at the component level without crashing the entire application.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">13-03-2025</div>
+                    <h2>What are React Hooks, and how do they differ from class-based components?</h2>
+                    <p>React Hooks are functions introduced in React 16.8 that allow you to use state, lifecycle methods, and other React features in functional components, rather than being restricted to class components. They revolutionized how developers write React code by simplifying logic and enabling more reusable and concise components.</p>
+                    <h4>Here are the key differences between React Hooks and class-based components:</h4>
+                    <ol>
+                        <li>
+                            <b>State Management:</b>
+                            <ul>
+                                <li>In class components, state is managed using the this.state object, and updates are done with this.setState().</li>
+                                <li>With hooks like useState, functional components can manage state directly without the need for a class.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Lifecycle Methods vs. useEffect</b>
+                            <ul>
+                                <li>Class components use lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount.</li>
+                                <li>The useEffect hook consolidates these into a single function, handling side effects and cleanup in a more streamlined way.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Simplified Logic:</b>
+                            <ul>
+                                <li>Hooks enable you to split logic into smaller, reusable functions called custom hooks, which aren't possible with class-based components.</li>
+                                <li>In classes, logic can become entangled due to the way lifecycle methods are organized.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Boilerplate:</b>
+                            <ul>
+                                <li>Class components often require more boilerplate code with constructors and this bindings.</li>
+                                <li>Functional components with hooks are leaner and easier to read, as they eliminate the need for constructors and this. </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Code Organization and Reusability:</b>
+                            <ul>
+                                <li>Hooks allow logic to be reused across components via custom hooks.</li>
+                                <li>Class components typically rely on patterns like Higher-Order Components (HOCs) or render props for code reuse, which can make the codebase harder to maintain.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">13-03-2025</div>
+                    <h2>How can you optimize the performance of a React application?</h2>
+                    <p>Optimizing the performance of a React application ensures a smoother user experience, especially as your app grows. Here are several effective techniques:</p>
+                    <ol>
+                        <li>
+                            <b>Code Splitting:</b>
+                            <ul>
+                                <li>Use tools like React's React.lazy and Suspense to split your code into smaller bundles that load only when needed, reducing initial load time.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Memoization:</b>
+                            <ul>
+                                <li>Use React.memo to prevent unnecessary re-renders of functional components if their props haven’t changed.</li>
+                                <li>Utilize hooks like useMemo and useCallback to memoize expensive computations or functions.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Virtualized Lists:</b>
+                            <ul>
+                                <li>For large datasets, libraries like react-window or react-virtualized render only the visible items, drastically improving rendering performance.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Efficient State Management:</b>
+                            <ul>
+                                <li>Avoid unnecessary re-renders by structuring your state properly. Lift the state up only when necessary and utilize libraries like Redux Toolkit or Zustand when managing complex states.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Lazy Loading Images and Components:</b>
+                            <ul>
+                                <li>Use libraries like react-lazyload for lazy loading images and components, ensuring they load only when visible in the viewport.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Use libraries like react-lazyload for lazy loading images and components, ensuring they load only when visible in the viewport.</b>
+                            <ul>
+                                <li>Define functions outside of JSX instead of inline, as inline functions are recreated on every render.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Reduce the Number of DOM Elements:</b>
+                            <ul>
+                                <li>Minimize unnecessary DOM elements to simplify the virtual DOM diffing process.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Debounce and Throttle:</b>
+                            <ul>
+                                <li>Debounce or throttle events like scrolling, resizing, or input using libraries like lodash or custom implementations to avoid excessive updates.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Use Immutable Data Structures:</b>
+                            <ul>
+                                <li>Keep your data immutable to ensure efficient change detection.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Monitor and Analyze Performance:</b>
+                            <ul>
+                                <li>Use React Developer Tools and browser profiling tools to identify performance bottlenecks and optimize accordingly.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">13-03-2025</div>
+                    <h2>What are the differences between Context API and Redux for state management?</h2>
+                    <p>The Context API and Redux are both tools for state management in React applications, but they differ significantly in their use cases, features, and implementation. Here's a detailed comparison:</p>
+                    <details>
+                        <summary><b>1. Purpose and Use Case:</b></summary>
+                        <ol style="padding-left: 45px;">
+                            <li>
+                                <b>Context API:</b>
+                                <ul>
+                                    <li>Used for simple and lightweight state sharing across a component tree.</li>
+                                    <li>Ideal for managing themes, authentication, and other application-wide states with minimal complexity.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Redux:</b>
+                                <ul>
+                                    <li>A comprehensive state management library for handling complex application states and interactions.</li>
+                                    <li>Suited for apps with deeply nested components or where state logic requires strict control, middleware, and debugging.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                    <br/>
+                    <details>
+                        <summary><b>2. State Management and Architecture:</b></summary>
+                        <ol style="padding-left: 45px;">
+                            <li>
+                                <b>Context API:</b>
+                                <ul>
+                                    <li>Works by providing a value from a Provider component that can be consumed by any child component within its tree.</li>
+                                    <li>Decentralized—does not enforce strict architecture or patterns.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Redux:</b>
+                                <ul>
+                                    <li>Follows a centralized state store pattern, where the entire application state is stored in a single store.</li>
+                                    <li>Encourages strict architectural patterns like actions, reducers, and middleware for state modifications.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                    <br/>
+                    <details>
+                        <summary><b>3. Boilerplate Code:</b></summary>
+                        <ol style="padding-left: 45px;">
+                            <li>
+                                <b>Context API:</b>
+                                <ul>
+                                    <li>Minimal boilerplate; define the Context and wrap components with a Provider.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Redux:</b>
+                                <ul>
+                                    <li>Requires more boilerplate to set up, including actions, reducers, a store, and possibly middleware.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                    <br/>
+                    <details>
+                        <summary><b>4. Performance:</b></summary>
+                        <ol style="padding-left: 45px;">
+                            <li>
+                                <b>Context API:</b>
+                                <ul>
+                                    <li>Can cause performance issues with frequent state updates because the entire component tree under the Provider re-renders when the context value changes.</li>
+                                    <li>Needs optimization techniques like memoization (React.memo) to mitigate this.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Redux:</b>
+                                <ul>
+                                    <li>Efficient re-renders due to the connect function (or useSelector in modern Redux) that allows selective updates.</li>
+                                    <li>Redux uses immutability to track state changes, making it more predictable.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                    <br/>
+                    <details>
+                        <summary><b>5. Middleware and Asynchronous Actions:</b></summary>
+                        <ol style="padding-left: 45px;">
+                            <li>
+                                <b>Context API:</b>
+                                <ul>
+                                    <li>Does not provide built-in support for middleware or handling asynchronous actions.</li>
+                                    <li>You need to handle these manually using hooks like useReducer or third-party libraries.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Redux:</b>
+                                <ul>
+                                    <li>Supports middleware (e.g., redux-thunk, redux-saga) for handling complex asynchronous logic.</li>
+                                    <li>Makes handling side effects and advanced state logic more manageable.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                    <br/>
+                    <details>
+                        <summary><b>6. Tooling and Ecosystem:</b></summary>
+                        <ol style="padding-left: 45px;">
+                            <li>
+                                <b>Context API:</b>
+                                <ul>
+                                    <li>Native to React, no external dependencies or dedicated tools.</li>
+                                    <li>Lightweight and simple to use.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Redux:</b>
+                                <ul>
+                                    <li>Offers a rich ecosystem of tools like Redux DevTools for state inspection and debugging.</li>
+                                    <li>Extends functionality with plugins and middleware.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                    <br/>
+                    <details>
+                        <summary><b>7. Community and Scalability:</b></summary>
+                        <ol style="padding-left: 45px;">
+                            <li>
+                                <b>Context API:</b>
+                                <ul>
+                                    <li>Suitable for small to medium projects or when state management requirements are straightforward.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Redux:</b>
+                                <ul>
+                                    <li>Proven to scale well for large and complex applications, thanks to its modular and predictable architecture.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">13-03-2025</div>
+                    <h2>What are the differences between React Router and other routing libraries?</h2>
+                    <p>React Router is a popular library for managing navigation and routing in React applications. However, there are several other routing libraries available, each with its own strengths and weaknesses. Here's a comparison between React Router and other common routing libraries:</p>
+                    <ol>
+                        <li><b>React Router</b>
+                            <ul>
+                                <li>Key Features: Declarative routing, dynamic route matching, nested routes, code splitting, and integration with React's state and lifecycle.</li>
+                                <li>Pros: Highly flexible and designed specifically for React applications. It supports advanced features like lazy loading and nested routes seamlessly.</li>
+                                <li>Cons: Can be a bit more complex to configure compared to simpler routing libraries.</li>
+                            </ul>
+                        </li>
+                        <li><b>Next.js Router</b>
+                            <ul>
+                                <li>Key Features: Built-in routing for server-side rendering (SSR) and static site generation (SSG).</li>
+                                <li>Pros: Part of the Next.js framework, making it ideal for building SEO-friendly and high-performance React applications. Routes are automatically generated based on the file system structure.</li>
+                                <li>Cons: Limited to Next.js projects; does not support some advanced routing patterns out-of-the-box like React Router does.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">13-03-2025</div>
+                    <h2>What is React's Strict Mode, and what is it used for?</h2>
+                    <p>React's Strict Mode is a development tool that highlights potential problems in your application. It doesn't render anything visible to the user but performs checks on your components and warns about:</p>
+                    <ul>
+                        <li>Unsafe lifecycle methods.</li>
+                        <li>Deprecated APIs.</li>
+                        <li>Potential side effects in code. It wraps part of your app with React.StrictMode and is used to ensure code quality and compatibility with future React versions.</li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">13-03-2025</div>
+                    <h2>What is the difference between useEffect and componentDidMount?</h2>
+                    <p>Both are used to handle side effects like fetching data or interacting with the DOM, but there are key differences:  </p>
+                    <ul>
+                        <li>componentDidMount is a lifecycle method in class components and runs only once after the component mounts.</li>
+                        <li>useEffect is a hook used in functional components and can emulate multiple lifecycle methods (like componentDidMount, componentDidUpdate, and componentWillUnmount) based on its dependency array. When the dependency array is empty ([]), useEffect behaves like componentDidMount and runs only once after the component mounts.</li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <div class="date">13-03-2025</div>
+                    <h2>What is the difference between client-side routing and server-side routing in React applications?</h2>
+                    <ul>
+                        <li><b>Client-Side Routing:</b> The routing logic is handled in the browser using JavaScript. When you navigate to a new route, the browser does not reload the entire page. Instead, the JavaScript framework (like React) updates the URL and dynamically renders the corresponding components. The entire application is loaded initially, and navigation after that modifies only the necessary parts of the UI.</li>
+                        <li><b>Server-Side Routing:</b> Routing is handled on the server. When you navigate to a new route, the browser sends an HTTP request to the server. The server processes the request and sends back the full HTML page for the desired route. Each navigation results in a full page reload in the browser.</li>
+                    </ul>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Question</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Question</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+            </div>
+
+
+            <br>
+            <h1 id="how-to">How to?</h1>
+            <div class="interview-container">
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to apply validation on props in React?</h2>
+                    <p>Answer</p>
+                    <details>
+                        <pre><code class="language-javascript">
+                            const App = () => {
+                                return (
+                                    <div>
+                                        <h1>Hello, JSX!</h1>
+                                        <p>This is a JSX component.</p>
+                                    </div>
+                                );
+                            };
+                            </code></pre>
+                    </details>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to use innerHTML in React?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to use styles in React?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How do you conditionally render components?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Why we need to be careful when spreading props on DOM elements?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How do you memoize a component?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How you implement Server Side Rendering or SSR?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to enable production mode in React?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Why should component names start with capital letter?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to loop inside JSX?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How do you access props in attribute quotes?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to conditionally apply class attributes?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <h2>What is the difference between React and ReactDOM?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Why ReactDOM is separated from React?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                  <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to use React label element?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to combine multiple inline style objects?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to re-render the view when the browser is resized?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to pretty print JSON with React?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to focus an input element on page load?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How can we find the version of React at runtime in the browser?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to add Google Analytics for react-router?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How do you apply vendor prefixes to inline styles in React?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>How to import and export components using react and ES6?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Is it possible to use async/await in plain React?</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Question</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Question</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Question</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+                 <!-- START: card -->
+                <div class="interview-card">
+                    <h2>Question</h2>
+                    <p>Answer</p>
+                </div>
+                <!-- END: card -->
+            </div>
+        </div>
+        <aside>
+            <div class="sidebar-inner">
+                <a href="index.html">Home</a><br><br>
+            
+                <h3>Menu:</h3>
+                <div class="topic-list">
+                    <ul>
+                        <li><a href="#basic">Basic</a></li>
+                        <li><a href="#advance">Advance</a></li>
+                        <li><a href="#how-to">How to?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
